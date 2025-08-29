@@ -1,1 +1,123 @@
-# cachorroooo
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajude o Rex 🐶</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: #ff6600; /* Laranja forte */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 15px;
+    }
+    .dog-photo {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .progress {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 15px 0;
+      height: 20px;
+    }
+    .progress-bar {
+      width: 75%; /* porcentagem simulada */
+      background: #ff6600;
+      height: 100%;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+    .stats span {
+      font-weight: bold;
+      color: #ff6600;
+    }
+    .story {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+    .btn {
+      display: block;
+      background: #ff6600;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #e65c00;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ajude o Rex a Voltar a Andar 🐶</h1>
+  </header>
+
+  <div class="container">
+    <img src="https://i.ibb.co/0YHfZ7N/dog.jpg" alt="Cachorro" class="dog-photo">
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="stats">
+      <div><span>R$ 9.000</span> arrecadado</div>
+      <div><span>12.000</span> meta</div>
+    </div>
+    <div class="stats">
+      <div><span>850</span> apoiadores</div>
+      <div><span>2.300</span> corações ❤️</div>
+    </div>
+
+    <div class="story">
+      <p>Esse é o <strong>Rex</strong>, um cachorro cheio de amor que sofreu um <strong>grave acidente</strong> e hoje precisa da nossa ajuda.</p>
+      <p>O Rex sempre foi <strong>companheiro, brincalhão e cheio de energia</strong>. Mas depois do acidente, ele não consegue mais andar direito e precisa de <strong>tratamento veterinário urgente</strong>.</p>
+      <p>🙏 <strong>Sua doação pode transformar a vida dele.</strong> Com a sua ajuda, o Rex vai ter uma nova chance de viver saudável e feliz.</p>
+    </div>
+
+    <a href="#" class="btn">💙 Quero Ajudar Agora</a>
+  </div>
+
+  <footer>
+    Plataforma Segura – Sua doação faz a diferença 🐾
+  </footer>
+
+</body>
+</html>
