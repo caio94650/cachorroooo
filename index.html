@@ -12,7 +12,7 @@
       color: #333;
     }
     header {
-      background: #ff6600; /* Laranja forte */
+      background: #ff6600; /* Laranja */
       color: white;
       text-align: center;
       padding: 20px;
@@ -36,12 +36,24 @@
       border-radius: 20px;
       overflow: hidden;
       margin: 15px 0;
-      height: 20px;
+      height: 22px;
+      position: relative;
     }
     .progress-bar {
-      width: 75%; /* porcentagem simulada */
       background: #ff6600;
       height: 100%;
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+    .progress-text {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+      line-height: 22px;
     }
     .stats {
       display: flex;
@@ -93,17 +105,19 @@
   <div class="container">
     <img src="https://i.ibb.co/0YHfZ7N/dog.jpg" alt="Cachorro" class="dog-photo">
 
+    <!-- Barra de Progresso -->
     <div class="progress">
-      <div class="progress-bar"></div>
+      <div class="progress-bar" id="progressBar"></div>
+      <div class="progress-text" id="progressText">0%</div>
     </div>
 
     <div class="stats">
-      <div><span>R$ 9.000</span> arrecadado</div>
-      <div><span>12.000</span> meta</div>
+      <div><span id="arrecadado">R$ 0</span> arrecadado</div>
+      <div><span id="meta">R$ 12.000</span> meta</div>
     </div>
     <div class="stats">
-      <div><span>850</span> apoiadores</div>
-      <div><span>2.300</span> corações ❤️</div>
+      <div><span id="apoiadores">0</span> apoiadores</div>
+      <div><span id="coracoes">0</span> corações ❤️</div>
     </div>
 
     <div class="story">
@@ -118,6 +132,25 @@
   <footer>
     Plataforma Segura – Sua doação faz a diferença 🐾
   </footer>
+
+  <script>
+    // Simulação dos valores
+    const arrecadado = 9000;
+    const meta = 12000;
+    const apoiadores = 850;
+    const coracoes = 2300;
+
+    // Calcula %
+    const porcentagem = Math.min((arrecadado / meta) * 100, 100);
+
+    // Atualiza na página
+    document.getElementById("arrecadado").textContent = "R$ " + arrecadado.toLocaleString("pt-BR");
+    document.getElementById("meta").textContent = "R$ " + meta.toLocaleString("pt-BR");
+    document.getElementById("apoiadores").textContent = apoiadores;
+    document.getElementById("coracoes").textContent = coracoes;
+    document.getElementById("progressBar").style.width = porcentagem + "%";
+    document.getElementById("progressText").textContent = Math.round(porcentagem) + "%";
+  </script>
 
 </body>
 </html>
